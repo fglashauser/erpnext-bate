@@ -3,7 +3,6 @@ import json
 
 @frappe.whitelist()
 def get_unique_sizes(doc):
-    #doc = json.loads(doc)
     unique_sizes = set()
 
     # Iteriere über alle Einträge in der "items"-Child-Tabelle
@@ -28,7 +27,6 @@ def get_sizes_amount(doc):
     # Alle (einzigarten) Größen holen
     all_sizes = get_unique_sizes(doc)
 
-    #doc = json.loads(doc)
     sizes_amount = []
 
     # Iteriere über alle Artikel
