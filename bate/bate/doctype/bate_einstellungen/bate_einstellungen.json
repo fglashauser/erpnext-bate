@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 17:53:35.794820",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_standard_vorbelegungen",
+  "item_groessen",
+  "item_zusammenstellungen"
+ ],
+ "fields": [
+  {
+   "description": "Die folgenden Eintr\u00e4ge werden bei der Erstellung des jeweiligen DocTypes automatisch angelegt.",
+   "fieldname": "sb_standard_vorbelegungen",
+   "fieldtype": "Section Break",
+   "label": "Standard Vorbelegungen"
+  },
+  {
+   "fieldname": "item_groessen",
+   "fieldtype": "Table",
+   "label": "Artikel: Gr\u00f6\u00dfen",
+   "options": "Groesse"
+  },
+  {
+   "fieldname": "item_zusammenstellungen",
+   "fieldtype": "Table",
+   "label": "Artikel: Zusammenstellungen",
+   "options": "Zusammenstellung-Child"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-08-27 19:11:06.087056",
+ "modified_by": "Administrator",
+ "module": "Bate",
+ "name": "BATE Einstellungen",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

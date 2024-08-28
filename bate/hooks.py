@@ -4,6 +4,31 @@ app_publisher = "Florian Glashauser (PC-Giga)"
 app_description = "Custom ERPNext-App for BATE GmbH created by PC-Giga / Florian Glashauser"
 app_email = "service@pc-giga.de"
 app_license = "agpl-3.0"
+required_apps = ["erpnext"]
+
+fixtures = [
+    {
+        # Benutzerdefinierte Felder wie z.B. in Artikel
+        "dt": "Custom Field",
+        "filters": [
+            {
+                "module": "Bate"
+            }
+        ]
+    }
+]
+
+doc_events = {
+    "Item": {
+        # Standard Vorbelegungen in neu erstellte Artikel einfügen
+        "before_insert": "bate.bate.doctype.item.item.insert_default_standards",
+    }
+}
+
+doctype_js = {
+    "Quotation" : "bate/doctype/quotation/quotation.js"
+}
+
 # required_apps = []
 
 # Includes in <head>

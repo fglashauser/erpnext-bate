@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 19:04:14.131396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "title",
+  "zusammenstellung",
+  "sizes",
+  "sizes_display"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Artikel",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "zusammenstellung",
+   "fieldtype": "Link",
+   "label": "Zusammenstellung",
+   "options": "Zusammenstellung"
+  },
+  {
+   "fieldname": "sizes",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "sizes (data)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sizes_display",
+   "fieldtype": "Data",
+   "label": "Gr\u00f6\u00dfen",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fetch_if_empty": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Bezeichnung"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-27 16:51:43.492799",
+ "modified_by": "Administrator",
+ "module": "Bate",
+ "name": "BATE Artikel",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
