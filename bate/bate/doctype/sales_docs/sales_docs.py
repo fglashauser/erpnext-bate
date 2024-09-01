@@ -5,6 +5,10 @@ import json
 def get_unique_sizes(doc):
     unique_sizes = set()
 
+    # Überprüfen, ob das Dokument ein JSON-String ist
+    if isinstance(doc, str):
+        doc = json.loads(doc)
+
     # Iteriere über alle Einträge in der "items"-Child-Tabelle
     for item in doc.get("items", []):
         if item.get("sizes"):
@@ -24,6 +28,10 @@ def get_sizes_amount(doc):
     """
     Gibt die Mengen der Größen für alle Artikel zurück.
     """
+    # Überprüfen, ob das Dokument ein JSON-String ist
+    if isinstance(doc, str):
+        doc = json.loads(doc)
+
     # Alle (einzigarten) Größen holen
     all_sizes = get_unique_sizes(doc)
 
