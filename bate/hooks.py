@@ -26,7 +26,12 @@ doc_events = {
 }
 
 doctype_js = {
-    "Quotation" : "bate/doctype/quotation/quotation.js"
+    "Quotation" : "bate/doctype/sales_docs/sales_docs.js",
+    "Sales Order" : "bate/doctype/sales_docs/sales_docs.js",
+    "Sales Invoice" : "bate/doctype/sales_docs/sales_docs.js",
+    "Purchase Order" : "bate/doctype/sales_docs/sales_docs.js",
+    "Delivery Note" : "bate/doctype/sales_docs/sales_docs.js",
+    #"Dunning" : "bate/doctype/sales_docs/sales_docs.js",
 }
 
 # required_apps = []
