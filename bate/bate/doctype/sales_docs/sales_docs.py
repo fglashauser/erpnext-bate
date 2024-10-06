@@ -40,7 +40,7 @@ def get_sizes_amount(doc):
     # Iteriere über alle Artikel
     for item in doc.get("items", []):
         item_sizes_amount = []
-        sizes = json.loads(item.get("sizes"))
+        sizes = json.loads(item.get("sizes", '{}'))
         for size in all_sizes:
 
             # Füge die Menge zur Liste hinzu

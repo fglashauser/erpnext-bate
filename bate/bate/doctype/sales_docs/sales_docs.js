@@ -1,4 +1,4 @@
-function setup(frm) {
+//function setup(frm) {
     // frm.set_query("items.zusammenstellung", function() {
     //     return {
     //         filters: {
@@ -6,6 +6,10 @@ function setup(frm) {
     //         }
     //     })
     // TODO: Implement Filter for "items.zusammenstellung"
+//}
+
+function on_item_code_change(frm, cdt, cdn) {
+    alert("Item Code changed");
 }
 
 function refresh(frm) {
@@ -82,9 +86,11 @@ function refresh(frm) {
     });
 }
 
-frappe.ui.form.on("Quotation", { setup: setup, refresh: refresh });
+frappe.ui.form.on("Quotation", { refresh: refresh });
 frappe.ui.form.on("Sales Order", { refresh: refresh });
 frappe.ui.form.on("Sales Invoice", { refresh: refresh });
 frappe.ui.form.on("Delivery Note", { refresh: refresh });
 frappe.ui.form.on("Purchase Order", { refresh: refresh });
 //frappe.ui.form.on("Dunning", { refresh: refresh });
+
+//frappe.ui.from.on("Quotation Item", "item_code", on_item_code_change);
